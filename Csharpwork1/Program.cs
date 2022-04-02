@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 
 /*程序设计题：请使用委托实现信用卡用户定时还款功能
- * 
 本题的应用场景解释：
     用户有一张信用卡，信用卡有一个总额度；
     每个月会有信用卡账单显示月消费总额，月消费总额是小于信用卡总额度的；
@@ -66,7 +65,7 @@ namespace Csharpwork1 {
         public void setrepayDate()
         {
             Console.Write("当前日期：");
-            string repayDate = Console.ReadLine();
+            string repayDate = Console.ReadLine();     //注意此处输入格式为：例如四月十二则输入0412
             this.repayDate = repayDate;
             if (String.Equals(this.repayDate,(month+day)))
             {
@@ -135,9 +134,6 @@ namespace Csharpwork1 {
             dlg.payBackMoneyEvent += new Delegate.payBackMoney(accountcart.charge);
             dlg.isPayTrue(accountcart, creditcard);
             Console.ReadKey();
-        }
-        
-        
+        }    
     }
-
 }
