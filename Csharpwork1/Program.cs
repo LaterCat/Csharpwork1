@@ -25,16 +25,12 @@ namespace Csharpwork1 {
 
         public void isPayTrue(AccountCard accountcart, CreditCard creditcard)
         {
-            if(payBackMoneyEvent != null)
+            if (payBackMoneyEvent != null)
                 payBackMoneyEvent(accountcart, creditcard);
-            
+            //payBackMoneyEvent?.Invoke(accountcart, creditcard);  //简化
+
         }
     }
-
-    /*public class Bank            //银行类
-    {
-
-    }*/
 
     public class CreditCard           //信用卡类
     {
@@ -42,15 +38,15 @@ namespace Csharpwork1 {
         private int totalMonthlyAmount;   //月消费总额
         private string repayDate;            //还款日期
 
+        public string year = DateTime.Now.ToString("yyyy-MM-dd").Split('-')[0];  //当前年月日
+        public string month = DateTime.Now.ToString("yyyy-MM-dd").Split('-')[1];
+        public string day = "15";
+        
         public CreditCard()
         {
-            string year = DateTime.Now.ToString("yyyy-MM-dd").Split('-')[0];
-            string month = DateTime.Now.ToString("yyyy-MM-dd").Split('-')[1];
-            string day = DateTime.Now.ToString("yyyy-MM-dd").Split('-')[2];
-            Console.WriteLine("还款日期：" + month + "月" + 15 +"日");
+            Console.WriteLine("还款日期：" + month + "月" + day +"日");
         }
-        //public string a =(DateTime.Now.ToString("yyyy-MM-dd"));
-        //public int a = int.Parse((DateTime.Now.ToString("yyyy-MM-dd")).Split('-')[0]);
+        
 
         public int gettotalMonthlyAmount()
         {
@@ -72,6 +68,15 @@ namespace Csharpwork1 {
             Console.Write("当前日期：");
             string repayDate = Console.ReadLine();
             this.repayDate = repayDate;
+            if (String.Equals(this.repayDate,(month+day)))
+            {
+                Console.WriteLine("当日可还款！");
+            }
+            else
+            {
+                Console.WriteLine("未到还款日期！");
+                System.Environment.Exit(0);
+            }
         }
     }
 
@@ -123,12 +128,6 @@ namespace Csharpwork1 {
             CreditCard creditcard = new CreditCard();
             AccountCard accountcart = new AccountCard();
 
-
-
-
-
-
-            int a = 0;
             creditcard.setrepayDate();
             accountcart.setBalance();
             creditcard.settotalMonthlyAmount();
