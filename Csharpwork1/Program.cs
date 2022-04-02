@@ -123,9 +123,12 @@ namespace Csharpwork1 {
             CreditCard creditcard = new CreditCard();
             AccountCard accountcart = new AccountCard();
 
-            
 
 
+
+
+
+            int a = 0;
             creditcard.setrepayDate();
             accountcart.setBalance();
             creditcard.settotalMonthlyAmount();
