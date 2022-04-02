@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharpwork1", "Csharpwork1\Csharpwork1.csproj", "{5BD3273D-DC59-42E8-8DF5-0B467FCAABD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BD3273D-DC59-42E8-8DF5-0B467FCAABD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD3273D-DC59-42E8-8DF5-0B467FCAABD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD3273D-DC59-42E8-8DF5-0B467FCAABD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD3273D-DC59-42E8-8DF5-0B467FCAABD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93196684-E209-4603-B3D7-5F5B4DA53ABF}
+	EndGlobalSection
+EndGlobal
